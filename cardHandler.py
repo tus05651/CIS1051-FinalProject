@@ -9,14 +9,13 @@ def deal():
     value = random.choice(values)
     return suit, value
 
-'''There will need to be a way to keep track of what is delt to prevent duplicate draws.
-probably not in this file 
-'''
+#Value will be what is on the card, points is what it is worth in the game.
+
+#This function returns the points of a card based on its value.
 def cardValue(value):
     if value in ["J", "Q", "K"]:
         return 10
     if value == "A":
-        #Ace can be 11 or 1 depending on the hand
-        #For now it will be 11, though there will be a way to change it to 1
+        #This will count aces as 11, the user can change this to 1 as part of the game function
         return 11
-    return int(value) #If number card, the value does not change
+    return int(value) #If number card, the value does not change, but this makes it an int
